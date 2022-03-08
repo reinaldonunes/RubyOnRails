@@ -2029,3 +2029,1188 @@ Processing by CoinsController#edit as HTML
 Completed 200 OK in 47ms (Views: 21.9ms | ActiveRecord: 0.3ms)
 
 
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateCoins (20220120173449)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "coins" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar, "acronym" varchar, "url_image" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20220120173449_create_coins.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220120173449"]]
+  ↳ bin/rails:9
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-03-08 14:43:10.073266"], ["updated_at", "2022-03-08 14:43:10.073266"]]
+  ↳ bin/rails:9
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2022-03-08 11:43:38 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/razodev/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6.2/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (0.3ms)
+  Rendered welcome/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 135ms (Views: 131.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/coins" for ::1 at 2022-03-08 11:43:41 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.3ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 41ms (Views: 30.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/coins" for ::1 at 2022-03-08 11:53:53 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (9.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateCoins (20220120173449)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "coins" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar, "acronym" varchar, "url_image" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20220120173449_create_coins.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220120173449"]]
+  ↳ bin/rails:9
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-03-08 14:54:03.625251"], ["updated_at", "2022-03-08 14:54:03.625251"]]
+  ↳ bin/rails:9
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mCoin Create (0.3ms)[0m  [1m[32mINSERT INTO "coins" ("description", "acronym", "url_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["description", "Bitcoin"], ["acronym", "BTC"], ["url_image", "https://assets/chinatechnews.com/wp-content/uploads/bitcoin-logo.jpg"], ["created_at", "2022-03-08 14:54:04.828129"], ["updated_at", "2022-03-08 14:54:04.828129"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[36mCoin Create (0.4ms)[0m  [1m[32mINSERT INTO "coins" ("description", "acronym", "url_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["description", "Ethereum"], ["acronym", "ETH"], ["url_image", "https://d33wubrfki0l68.cloudfront.net/fcd4ecd90386aeb50a235ddc4f0063cfbb8a7b66/4295e/static/bfc04ac72981166c740b189463e1f74c/40129/eth-diamond-black-white.jpg"], ["created_at", "2022-03-08 14:54:04.837760"], ["updated_at", "2022-03-08 14:54:04.837760"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[36mCoin Create (0.3ms)[0m  [1m[32mINSERT INTO "coins" ("description", "acronym", "url_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["description", "Dash"], ["acronym", "DASH"], ["url_image", "data:image/png;base64,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"], ["created_at", "2022-03-08 14:54:04.849350"], ["updated_at", "2022-03-08 14:54:04.849350"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:23
+Started GET "/coins" for ::1 at 2022-03-08 11:54:14 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/razodev/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6.2/lib/active_record/log_subscriber.rb:98
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.1ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 145ms (Views: 140.2ms | ActiveRecord: 0.5ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (8.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateCoins (20220120173449)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "coins" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar, "acronym" varchar, "url_image" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20220120173449_create_coins.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220120173449"]]
+  ↳ bin/rails:9
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-03-08 14:54:50.966243"], ["updated_at", "2022-03-08 14:54:50.966243"]]
+  ↳ bin/rails:9
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mCoin Create (0.3ms)[0m  [1m[32mINSERT INTO "coins" ("description", "acronym", "url_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["description", "Bitcoin"], ["acronym", "BTC"], ["url_image", "https://logodownload.org/wp-content/uploads/2017/06/bitcoin-logo-5-1.png"], ["created_at", "2022-03-08 14:54:52.153568"], ["updated_at", "2022-03-08 14:54:52.153568"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (7.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[36mCoin Create (0.2ms)[0m  [1m[32mINSERT INTO "coins" ("description", "acronym", "url_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["description", "Ethereum"], ["acronym", "ETH"], ["url_image", "https://d33wubrfki0l68.cloudfront.net/fcd4ecd90386aeb50a235ddc4f0063cfbb8a7b66/4295e/static/bfc04ac72981166c740b189463e1f74c/40129/eth-diamond-black-white.jpg"], ["created_at", "2022-03-08 14:54:52.162542"], ["updated_at", "2022-03-08 14:54:52.162542"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[36mCoin Create (0.1ms)[0m  [1m[32mINSERT INTO "coins" ("description", "acronym", "url_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["description", "Dash"], ["acronym", "DASH"], ["url_image", "data:image/png;base64,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"], ["created_at", "2022-03-08 14:54:52.167124"], ["updated_at", "2022-03-08 14:54:52.167124"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:23
+Started GET "/coins" for ::1 at 2022-03-08 11:55:05 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/razodev/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6.2/lib/active_record/log_subscriber.rb:98
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 149ms (Views: 143.9ms | ActiveRecord: 0.6ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateCoins (20220120173449)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "coins" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar, "acronym" varchar, "url_image" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20220120173449_create_coins.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220120173449"]]
+  ↳ bin/rails:9
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-03-08 14:55:55.220952"], ["updated_at", "2022-03-08 14:55:55.220952"]]
+  ↳ bin/rails:9
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mCoin Create (0.2ms)[0m  [1m[32mINSERT INTO "coins" ("description", "acronym", "url_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["description", "Bitcoin"], ["acronym", "BTC"], ["url_image", "https://logodownload.org/wp-content/uploads/2017/06/bitcoin-logo-5-1.png"], ["created_at", "2022-03-08 14:55:56.410995"], ["updated_at", "2022-03-08 14:55:56.410995"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[36mCoin Create (0.3ms)[0m  [1m[32mINSERT INTO "coins" ("description", "acronym", "url_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["description", "Ethereum"], ["acronym", "ETH"], ["url_image", "https://d33wubrfki0l68.cloudfront.net/fcd4ecd90386aeb50a235ddc4f0063cfbb8a7b66/4295e/static/bfc04ac72981166c740b189463e1f74c/40129/eth-diamond-black-white.jpg"], ["created_at", "2022-03-08 14:55:56.421449"], ["updated_at", "2022-03-08 14:55:56.421449"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[36mCoin Create (0.3ms)[0m  [1m[32mINSERT INTO "coins" ("description", "acronym", "url_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["description", "Dash"], ["acronym", "DASH"], ["url_image", "data:image/png;base64,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"], ["created_at", "2022-03-08 14:55:56.427170"], ["updated_at", "2022-03-08 14:55:56.427170"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:23
+Started GET "/coins" for ::1 at 2022-03-08 11:56:09 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/razodev/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6.2/lib/active_record/log_subscriber.rb:98
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.1ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 145ms (Views: 140.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/coins" for ::1 at 2022-03-08 11:56:10 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/coins" for ::1 at 2022-03-08 11:56:10 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 25ms (Views: 23.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/coins" for ::1 at 2022-03-08 11:56:12 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (10.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateCoins (20220120173449)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "coins" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar, "acronym" varchar, "url_image" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20220120173449_create_coins.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220120173449"]]
+  ↳ bin/rails:9
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-03-08 14:56:28.931202"], ["updated_at", "2022-03-08 14:56:28.931202"]]
+  ↳ bin/rails:9
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mCoin Create (0.3ms)[0m  [1m[32mINSERT INTO "coins" ("description", "acronym", "url_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["description", "Bitcoin"], ["acronym", "BTC"], ["url_image", "https://logodownload.org/wp-content/uploads/2017/06/bitcoin-logo-5-1.png"], ["created_at", "2022-03-08 14:56:30.136499"], ["updated_at", "2022-03-08 14:56:30.136499"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[36mCoin Create (0.2ms)[0m  [1m[32mINSERT INTO "coins" ("description", "acronym", "url_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["description", "Ethereum"], ["acronym", "ETH"], ["url_image", "https://d33wubrfki0l68.cloudfront.net/fcd4ecd90386aeb50a235ddc4f0063cfbb8a7b66/4295e/static/bfc04ac72981166c740b189463e1f74c/40129/eth-diamond-black-white.jpg"], ["created_at", "2022-03-08 14:56:30.141362"], ["updated_at", "2022-03-08 14:56:30.141362"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[36mCoin Create (0.1ms)[0m  [1m[32mINSERT INTO "coins" ("description", "acronym", "url_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["description", "Dash"], ["acronym", "DASH"], ["url_image", "data:image/png;base64,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"], ["created_at", "2022-03-08 14:56:30.144630"], ["updated_at", "2022-03-08 14:56:30.144630"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateCoins (20220120173449)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "coins" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar, "acronym" varchar, "url_image" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20220120173449_create_coins.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220120173449"]]
+  ↳ bin/rails:9
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-03-08 14:57:04.433063"], ["updated_at", "2022-03-08 14:57:04.433063"]]
+  ↳ bin/rails:9
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mCoin Create (0.2ms)[0m  [1m[32mINSERT INTO "coins" ("description", "acronym", "url_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["description", "Bitcoin"], ["acronym", "BTC"], ["url_image", "https://logodownload.org/wp-content/uploads/2017/06/bitcoin-logo-5-1.png"], ["created_at", "2022-03-08 14:57:05.632277"], ["updated_at", "2022-03-08 14:57:05.632277"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[36mCoin Create (0.2ms)[0m  [1m[32mINSERT INTO "coins" ("description", "acronym", "url_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["description", "Ethereum"], ["acronym", "ETH"], ["url_image", "https://d33wubrfki0l68.cloudfront.net/fcd4ecd90386aeb50a235ddc4f0063cfbb8a7b66/4295e/static/bfc04ac72981166c740b189463e1f74c/40129/eth-diamond-black-white.jpg"], ["created_at", "2022-03-08 14:57:05.641424"], ["updated_at", "2022-03-08 14:57:05.641424"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[36mCoin Create (0.2ms)[0m  [1m[32mINSERT INTO "coins" ("description", "acronym", "url_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["description", "Dash"], ["acronym", "DASH"], ["url_image", "data:image/png;base64,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"], ["created_at", "2022-03-08 14:57:05.644466"], ["updated_at", "2022-03-08 14:57:05.644466"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:23
+Started GET "/coins" for ::1 at 2022-03-08 11:57:11 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/razodev/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6.2/lib/active_record/log_subscriber.rb:98
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 145ms (Views: 140.0ms | ActiveRecord: 0.5ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateCoins (20220120173449)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "coins" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar, "acronym" varchar, "url_image" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20220120173449_create_coins.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220120173449"]]
+  ↳ bin/rails:9
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-03-08 14:57:46.470381"], ["updated_at", "2022-03-08 14:57:46.470381"]]
+  ↳ bin/rails:9
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mCoin Create (0.2ms)[0m  [1m[32mINSERT INTO "coins" ("description", "acronym", "url_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["description", "Bitcoin"], ["acronym", "BTC"], ["url_image", "https://logodownload.org/wp-content/uploads/2017/06/bitcoin-logo-5-1.png"], ["created_at", "2022-03-08 14:57:47.666293"], ["updated_at", "2022-03-08 14:57:47.666293"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (7.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[36mCoin Create (0.3ms)[0m  [1m[32mINSERT INTO "coins" ("description", "acronym", "url_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["description", "Ethereum"], ["acronym", "ETH"], ["url_image", "https://d33wubrfki0l68.cloudfront.net/fcd4ecd90386aeb50a235ddc4f0063cfbb8a7b66/4295e/static/bfc04ac72981166c740b189463e1f74c/40129/eth-diamond-black-white.jpg"], ["created_at", "2022-03-08 14:57:47.676049"], ["updated_at", "2022-03-08 14:57:47.676049"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[36mCoin Create (0.3ms)[0m  [1m[32mINSERT INTO "coins" ("description", "acronym", "url_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["description", "Dash"], ["acronym", "DASH"], ["url_image", "data:image/png;base64,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"], ["created_at", "2022-03-08 14:57:47.683080"], ["updated_at", "2022-03-08 14:57:47.683080"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (13.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateCoins (20220120173449)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "coins" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar, "acronym" varchar, "url_image" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20220120173449_create_coins.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220120173449"]]
+  ↳ bin/rails:9
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-03-08 14:58:36.794588"], ["updated_at", "2022-03-08 14:58:36.794588"]]
+  ↳ bin/rails:9
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mCoin Create (0.6ms)[0m  [1m[32mINSERT INTO "coins" ("description", "acronym", "url_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["description", "Bitcoin"], ["acronym", "BTC"], ["url_image", "https://logodownload.org/wp-content/uploads/2017/06/bitcoin-logo-5-1.png"], ["created_at", "2022-03-08 14:58:37.996475"], ["updated_at", "2022-03-08 14:58:37.996475"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (7.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[36mCoin Create (0.5ms)[0m  [1m[32mINSERT INTO "coins" ("description", "acronym", "url_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["description", "Ethereum"], ["acronym", "ETH"], ["url_image", "https://d33wubrfki0l68.cloudfront.net/fcd4ecd90386aeb50a235ddc4f0063cfbb8a7b66/4295e/static/bfc04ac72981166c740b189463e1f74c/40129/eth-diamond-black-white.jpg"], ["created_at", "2022-03-08 14:58:38.006823"], ["updated_at", "2022-03-08 14:58:38.006823"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[36mCoin Create (0.3ms)[0m  [1m[32mINSERT INTO "coins" ("description", "acronym", "url_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["description", "Dash"], ["acronym", "DASH"], ["url_image", "data:image/png;base64,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"], ["created_at", "2022-03-08 14:58:38.012227"], ["updated_at", "2022-03-08 14:58:38.012227"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:23
+Started GET "/coins" for ::1 at 2022-03-08 13:08:29 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/razodev/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6.2/lib/active_record/log_subscriber.rb:98
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.1ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 147ms (Views: 142.5ms | ActiveRecord: 0.5ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateCoins (20220120173449)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "coins" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar, "acronym" varchar, "url_image" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20220120173449_create_coins.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220120173449"]]
+  ↳ bin/rails:9
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-03-08 17:01:45.014070"], ["updated_at", "2022-03-08 17:01:45.014070"]]
+  ↳ bin/rails:9
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mCoin Create (0.3ms)[0m  [1m[32mINSERT INTO "coins" ("description", "acronym", "url_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["description", "Bitcoin"], ["acronym", "BTC"], ["url_image", "https://logodownload.org/wp-content/uploads/2017/06/bitcoin-logo-5-1.png"], ["created_at", "2022-03-08 17:01:46.395257"], ["updated_at", "2022-03-08 17:01:46.395257"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (6.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[36mCoin Create (0.2ms)[0m  [1m[32mINSERT INTO "coins" ("description", "acronym", "url_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["description", "Ethereum"], ["acronym", "ETH"], ["url_image", "https://d33wubrfki0l68.cloudfront.net/fcd4ecd90386aeb50a235ddc4f0063cfbb8a7b66/4295e/static/bfc04ac72981166c740b189463e1f74c/40129/eth-diamond-black-white.jpg"], ["created_at", "2022-03-08 17:01:46.404737"], ["updated_at", "2022-03-08 17:01:46.404737"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[36mCoin Create (0.2ms)[0m  [1m[32mINSERT INTO "coins" ("description", "acronym", "url_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["description", "Dash"], ["acronym", "DASH"], ["url_image", "data:image/png;base64,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"], ["created_at", "2022-03-08 17:01:46.408126"], ["updated_at", "2022-03-08 17:01:46.408126"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:23
+Started GET "/coins" for ::1 at 2022-03-08 14:37:13 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/razodev/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6.2/lib/active_record/log_subscriber.rb:98
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.3ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 158ms (Views: 151.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/coins/1" for ::1 at 2022-03-08 14:53:46 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (0.3ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:63
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 36ms (Views: 19.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/coins/2" for ::1 at 2022-03-08 14:53:52 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCoin Load (0.4ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:63
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 35ms (Views: 29.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/coins/1" for ::1 at 2022-03-08 14:56:21 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (0.3ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:63
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/show.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/home/razodev/Documentos/github/RubyOnRails/RailsUdemyCurso/Modulo02_Crypto/app/views/coins/show.html.erb:15: syntax error, unexpected '<'
+...reeze;@output_buffer.append=( <%= image_tag @coin.url_image ...
+...                              ^
+/home/razodev/Documentos/github/RubyOnRails/RailsUdemyCurso/Modulo02_Crypto/app/views/coins/show.html.erb:22: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/razodev/Documentos/github/RubyOnRails/RailsUdemyCurso/Modulo02_Crypto/app/views/coins/show.html.erb:24: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~):
+  
+app/views/coins/show.html.erb:15: syntax error, unexpected '<'
+app/views/coins/show.html.erb:22: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/coins/show.html.erb:24: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/coins/1" for ::1 at 2022-03-08 14:56:33 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:63
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 30ms (Views: 27.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/coins/1" for ::1 at 2022-03-08 14:56:47 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (0.1ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:63
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/coins/1" for ::1 at 2022-03-08 14:57:01 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (0.1ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:63
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/coins/1" for ::1 at 2022-03-08 14:57:29 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:63
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/coins/1" for ::1 at 2022-03-08 14:57:42 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (0.1ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:63
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/coins/1" for ::1 at 2022-03-08 14:57:48 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (0.1ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:63
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/coins/1" for ::1 at 2022-03-08 14:57:58 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:63
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 21ms (Views: 18.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/coins" for ::1 at 2022-03-08 14:58:01 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.3ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 27ms (Views: 24.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/coins" for ::1 at 2022-03-08 14:58:12 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.1ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/coins" for ::1 at 2022-03-08 14:58:30 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.1ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 15ms (Views: 14.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/coins" for ::1 at 2022-03-08 14:58:43 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.1ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/coins" for ::1 at 2022-03-08 14:59:06 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 31ms (Views: 29.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/coins/1" for ::1 at 2022-03-08 14:59:09 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (0.3ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:63
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 36ms (Views: 32.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/coins/1/edit" for ::1 at 2022-03-08 14:59:11 -0300
+Processing by CoinsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (0.3ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:63
+  Rendering coins/edit.html.erb within layouts/application
+  Rendered coins/_form.html.erb (21.5ms)
+  Rendered coins/edit.html.erb within layouts/application (26.8ms)
+Completed 200 OK in 49ms (Views: 44.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/coins/1/edit" for ::1 at 2022-03-08 15:00:04 -0300
+Processing by CoinsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (0.1ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:63
+  Rendering coins/edit.html.erb within layouts/application
+  Rendered coins/_form.html.erb (2.6ms)
+  Rendered coins/edit.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 23ms (Views: 20.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/coins" for ::1 at 2022-03-08 15:00:05 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.3ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 36ms (Views: 32.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/coins/new" for ::1 at 2022-03-08 15:00:07 -0300
+Processing by CoinsController#new as HTML
+  Rendering coins/new.html.erb within layouts/application
+  Rendered coins/_form.html.erb (6.3ms)
+  Rendered coins/new.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 34ms (Views: 31.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/coins" for ::1 at 2022-03-08 15:00:18 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.1ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 26ms (Views: 24.7ms | ActiveRecord: 0.1ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (8.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateCoins (20220120173449)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "coins" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar, "acronym" varchar, "url_image" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20220120173449_create_coins.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220120173449"]]
+  ↳ bin/rails:9
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-03-08 19:55:59.612089"], ["updated_at", "2022-03-08 19:55:59.612089"]]
+  ↳ bin/rails:9
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mCoin Create (0.3ms)[0m  [1m[32mINSERT INTO "coins" ("description", "acronym", "url_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["description", "Bitcoin"], ["acronym", "BTC"], ["url_image", "https://logodownload.org/wp-content/uploads/2017/06/bitcoin-logo-5-1.png"], ["created_at", "2022-03-08 19:56:00.788163"], ["updated_at", "2022-03-08 19:56:00.788163"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[36mCoin Create (0.2ms)[0m  [1m[32mINSERT INTO "coins" ("description", "acronym", "url_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["description", "Ethereum"], ["acronym", "ETH"], ["url_image", "https://d33wubrfki0l68.cloudfront.net/fcd4ecd90386aeb50a235ddc4f0063cfbb8a7b66/4295e/static/bfc04ac72981166c740b189463e1f74c/40129/eth-diamond-black-white.jpg"], ["created_at", "2022-03-08 19:56:00.795112"], ["updated_at", "2022-03-08 19:56:00.795112"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[36mCoin Create (0.2ms)[0m  [1m[32mINSERT INTO "coins" ("description", "acronym", "url_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["description", "Dash"], ["acronym", "DASH"], ["url_image", "data:image/png;base64,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"], ["created_at", "2022-03-08 19:56:00.799375"], ["updated_at", "2022-03-08 19:56:00.799375"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:23
+Started GET "/coins/new" for ::1 at 2022-03-08 16:56:06 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/razodev/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6.2/lib/active_record/log_subscriber.rb:98
+Processing by CoinsController#new as HTML
+  Rendering coins/new.html.erb within layouts/application
+  Rendered coins/_form.html.erb (5.8ms)
+  Rendered coins/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 153ms (Views: 144.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2022-03-08 16:56:11 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (0.4ms)
+  Rendered welcome/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/coins" for ::1 at 2022-03-08 16:56:13 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.6ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 40ms (Views: 35.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/coins" for ::1 at 2022-03-08 16:56:17 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.4ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 40ms (Views: 35.3ms | ActiveRecord: 0.4ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mCoin Create (0.3ms)[0m  [1m[32mINSERT INTO "coins" ("description", "acronym", "url_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["description", "Bitcoin"], ["acronym", "BTC"], ["url_image", "https://logodownload.org/wp-content/uploads/2017/06/bitcoin-logo-5-1.png"], ["created_at", "2022-03-08 20:01:05.062405"], ["updated_at", "2022-03-08 20:01:05.062405"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mCoin Create (0.2ms)[0m  [1m[32mINSERT INTO "coins" ("description", "acronym", "url_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["description", "Ethereum"], ["acronym", "ETH"], ["url_image", "https://d33wubrfki0l68.cloudfront.net/fcd4ecd90386aeb50a235ddc4f0063cfbb8a7b66/4295e/static/bfc04ac72981166c740b189463e1f74c/40129/eth-diamond-black-white.jpg"], ["created_at", "2022-03-08 20:01:05.068778"], ["updated_at", "2022-03-08 20:01:05.068778"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mCoin Create (0.2ms)[0m  [1m[32mINSERT INTO "coins" ("description", "acronym", "url_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["description", "Dash"], ["acronym", "DASH"], ["url_image", "data:image/png;base64,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"], ["created_at", "2022-03-08 20:01:05.073515"], ["updated_at", "2022-03-08 20:01:05.073515"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+Started GET "/coins" for ::1 at 2022-03-08 17:01:19 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/razodev/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6.2/lib/active_record/log_subscriber.rb:98
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.1ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 147ms (Views: 140.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/coins" for ::1 at 2022-03-08 17:01:21 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 31ms (Views: 28.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/coins" for ::1 at 2022-03-08 17:01:22 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/coins" for ::1 at 2022-03-08 17:08:21 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 20ms (Views: 17.9ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mCoin Load (0.1ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."description" = ? AND "coins"."acronym" = ? AND "coins"."url_image" = ? LIMIT ?[0m  [["description", "Bitcoin"], ["acronym", "BTC"], ["url_image", "https://logodownload.org/wp-content/uploads/2017/06/bitcoin-logo-5-1.png"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mCoin Load (0.1ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."description" = ? AND "coins"."acronym" = ? AND "coins"."url_image" = ? LIMIT ?[0m  [["description", "Ethereum"], ["acronym", "ETH"], ["url_image", "https://d33wubrfki0l68.cloudfront.net/fcd4ecd90386aeb50a235ddc4f0063cfbb8a7b66/4295e/static/bfc04ac72981166c740b189463e1f74c/40129/eth-diamond-black-white.jpg"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mCoin Load (0.1ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."description" = ? AND "coins"."acronym" = ? AND "coins"."url_image" = ? LIMIT ?[0m  [["description", "Dash"], ["acronym", "DASH"], ["url_image", "data:image/png;base64,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"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+Started GET "/coins" for ::1 at 2022-03-08 17:08:39 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/razodev/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6.2/lib/active_record/log_subscriber.rb:98
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 146ms (Views: 140.2ms | ActiveRecord: 0.5ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (8.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateCoins (20220120173449)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "coins" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar, "acronym" varchar, "url_image" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20220120173449_create_coins.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220120173449"]]
+  ↳ bin/rails:9
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-03-08 20:08:52.566238"], ["updated_at", "2022-03-08 20:08:52.566238"]]
+  ↳ bin/rails:9
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mCoin Load (0.1ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."description" = ? AND "coins"."acronym" = ? AND "coins"."url_image" = ? LIMIT ?[0m  [["description", "Bitcoin"], ["acronym", "BTC"], ["url_image", "https://logodownload.org/wp-content/uploads/2017/06/bitcoin-logo-5-1.png"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:30
+  [1m[36mCoin Create (0.2ms)[0m  [1m[32mINSERT INTO "coins" ("description", "acronym", "url_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["description", "Bitcoin"], ["acronym", "BTC"], ["url_image", "https://logodownload.org/wp-content/uploads/2017/06/bitcoin-logo-5-1.png"], ["created_at", "2022-03-08 20:08:53.757729"], ["updated_at", "2022-03-08 20:08:53.757729"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:30
+  [1m[36mCoin Load (0.1ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."description" = ? AND "coins"."acronym" = ? AND "coins"."url_image" = ? LIMIT ?[0m  [["description", "Ethereum"], ["acronym", "ETH"], ["url_image", "https://d33wubrfki0l68.cloudfront.net/fcd4ecd90386aeb50a235ddc4f0063cfbb8a7b66/4295e/static/bfc04ac72981166c740b189463e1f74c/40129/eth-diamond-black-white.jpg"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:30
+  [1m[36mCoin Create (0.1ms)[0m  [1m[32mINSERT INTO "coins" ("description", "acronym", "url_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["description", "Ethereum"], ["acronym", "ETH"], ["url_image", "https://d33wubrfki0l68.cloudfront.net/fcd4ecd90386aeb50a235ddc4f0063cfbb8a7b66/4295e/static/bfc04ac72981166c740b189463e1f74c/40129/eth-diamond-black-white.jpg"], ["created_at", "2022-03-08 20:08:53.763591"], ["updated_at", "2022-03-08 20:08:53.763591"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:30
+  [1m[36mCoin Load (0.1ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."description" = ? AND "coins"."acronym" = ? AND "coins"."url_image" = ? LIMIT ?[0m  [["description", "Dash"], ["acronym", "DASH"], ["url_image", "data:image/png;base64,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"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:30
+  [1m[36mCoin Create (0.2ms)[0m  [1m[32mINSERT INTO "coins" ("description", "acronym", "url_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["description", "Dash"], ["acronym", "DASH"], ["url_image", "data:image/png;base64,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"], ["created_at", "2022-03-08 20:08:53.768674"], ["updated_at", "2022-03-08 20:08:53.768674"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:30
+Started GET "/coins" for ::1 at 2022-03-08 17:08:57 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/razodev/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6.2/lib/active_record/log_subscriber.rb:98
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 143ms (Views: 137.9ms | ActiveRecord: 0.5ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mCoin Load (0.1ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."description" = ? AND "coins"."acronym" = ? AND "coins"."url_image" = ? LIMIT ?[0m  [["description", "Bitcoin"], ["acronym", "BTC"], ["url_image", "https://logodownload.org/wp-content/uploads/2017/06/bitcoin-logo-5-1.png"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mCoin Load (0.1ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."description" = ? AND "coins"."acronym" = ? AND "coins"."url_image" = ? LIMIT ?[0m  [["description", "Ethereum"], ["acronym", "ETH"], ["url_image", "https://d33wubrfki0l68.cloudfront.net/fcd4ecd90386aeb50a235ddc4f0063cfbb8a7b66/4295e/static/bfc04ac72981166c740b189463e1f74c/40129/eth-diamond-black-white.jpg"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mCoin Load (0.1ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."description" = ? AND "coins"."acronym" = ? AND "coins"."url_image" = ? LIMIT ?[0m  [["description", "Dash"], ["acronym", "DASH"], ["url_image", "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAaVBMVEUlc8L///8AZ77w9PoIa7+8zugVbsAAZL2MrdmduN4AaL4ccMEgccHg6PRFgsjM2e1RiMrh6fSzyOVgkc3p7/fD0+o5fMWTstsud8R0ndLS3u/1+PxrmNCuxOOGqdemvuF+pNVdj80AX7s2V3BoAAAKh0lEQVR4nOWd6ZqrNgyGwWMMAYfsC5NMktP7v8g6OwmLJNtgk3y/ztPTTnnH8iJZloKwc+1mk+i4ORWLab7eBkGwXefTRXHaHKPJbNf9/z7o8ofPVqMiT1nKuRAik0rBWec/ZOqfcK7+Li9Gq1mXH9EV4TJKpowpsitUs6QiZWyaRMuOvqQLwuW8yBQcxPbKyVlWzLugtE44SQIiXZkySCa2P8guYbRnqRbdkzJl+8jqN1kkXO3V4BnQ3aWGcr+y91m2CMcHbgXvDskPY0tfZodwnjMj46xKCpbPrXybBcKfJOV28W6QPE1+PCAcF7Hl4SsxirgwNlZDwvEitjf76iTihSGjEeH4X5x1yndWFv8zYjQgXO574Lsy7g0OO/qEh47tsywRH3on/LO4+6EY+V+vhON1J/tDmyRf601HLcJT3DffhTE+9US4Ev0a6FNCaJxX6YQFczGAV0lWdE74m7kawKtE9tstYeJkBpYl46RDwl3OHfOdxXNShI5COEn7OcNAylJKqINAOHJuoXfJeNQF4SJ1DVZSurBOuFu7XUPfJdbYyYgknHE/puBTGUdGynGEE2+m4FMyxq03KMJ57BqnVjEqVIUhPPoJqBCPdgg3zDVJo9jGBqHHgChEkNBrQAwiRDjyG1AhQscbgPDoO6BCBJabdkJPt4lXAZtGK+FkCIAKsXXrbyMcDwNQIbZF4VoId71HDHUlecsxvIVw7dthu1nZWodw4Ze71C7R7C82Eo58cnhhpY3bYhPhQJbRpxoX1AbCXTqUVeYumTasNg2E+XBWmbuynEK48SEuShWvP4TXEv4ObRJeFdcG/GsJs6FNwqtkhiUshrQTliXqbqZqCFf+e0xNYjX3izWEA7XRs+rstEp4GqqNniWqF+EVwsG4TPWqOlIVwvVwbfQsWfEy3gn/hrjXl1XJu3knHIzX2yTJ2wkPQ15mrhKHNsLlsJeZq+JlC+F++EOoBnHfTDjwneKu1x3jhfDf8LzCOmX/mgg/ZAjfBrFMuPiMIVSDuKgn/JghfB3EEuFg3cKqyo7ik/Dnc4ZQDeJPDWHyOUOoBjGpITQ6kQrWi1Js/nzpdPognJs4FeKw++lBy9+/PcN9J59XCHOTIUypibsGmm8x8Xj5iA/fCccm4af6MF5nWknExs3uG8ad0MhtEsTEZGP9g0314UTdCY3WmT6N9IYIDshjrbkRrkzWGSn7BlTfDY4IX70QGjmGvRup0gq8wL27iTdCo/NM/0aqNAUHMS4TRkMz0vPDAei7eFQiHJyRKoGvj29meiU0uotxYqSY/Y09CeERb5EbI8XMrOvDkwD362iRIyMNZ/BqengQwptLixwZabgDp5YM7oRLozOpIyPFLB5seSM0c5wcGWkYbuFjzfxGaBSgcWWkmHvAS7jmTGhyre3OSBGrx8WrCwynoTsjxWzi54kYGB7Z3BkpZmDOB7fALMgmO6331irM+ni2sABzSm9WtlhFHQl6trVHhDLk9EJodCjNeEdi/9oBdyiHj50JjRaa7sSBmma4TVwtNYFZAKM7xcArWNxdJ18pwpGX0fzXW05dIw3ESBH6eeXEgYUGucVlhSI0CnZ3JshIkVEJmStCL18dZNN2QPQGkIYB7Ga5EFQzCb08sl0Au8ouFAPF9k7YlIN0HEx83CwkZKToSwg+CWjnbqEj+lLGgXeh+NAZj4IjZbMQxxFdR/pqDRkpPnQmjsGGQFiTY4wReabLhucvD+HNQmwCSlq3njNI9z8hI/3F/87EKSjwiVCaEQv6lQEDyiQS7C4rggV+kghEjYYakTfcaq72m+Ao2/NnLQKC/8u0aqfTjVQARQQoOQdyGuAXOnD+10vDSIHfJMUbknmAf30Azf8G2TdSyoMJuQ626H8ZOu7Xy76R0oISeD7QJ22QhpECVTyPXZ0zocBJg+iuyxb4iSaxwVYxLUANIwX2JGT84imsnWb0uppn2TdS4k3ZFr2WkmoVPkVOYwGj6LRsdLWWIvdDKbQANYwUuOohGqnaD5HzVvOOiW6k0Ome+DtTZxrkuRSaHQ2iGymUyEn8nalzKc63kNASXi/7RkrdfZRvgfMPNU9s9o2Uegeh/EOcr8X0Wk/RjRRa0NBBtjvhBhun2SQaol8YvD+PrIia6SuO2FibVpCNfiMC7brk/DQe+RUvrTzifRc5P41P/Ip5g8E8cuw1nfl1bwEZKSHIdhPb+XX3lAJDSAnu3n+iV/eHoP9CcNivutwfenQHzIHmDjPyjLrcAXt0jw852fRPvdzj+5OLUVsiqCx6VZJLLoY/+TSQkWpUfLjk01BP66KrLCj+HzCEGkE2ppHXxo9dJbJFUBMZSTbSW14bKTex56eGZWlkid5yE0n/pcOMWcKN0123/FLSUuMuYzbSOHzdcoQped4OjZQ+Cx953pRTjTsjHWls249cfUIU2ZmRalV8eLy3wE9Ed0Y61am78ngzg3/35MxIDzpHy+e7J3xswJWR/mmdLEtv17DxHVdGGuk9Uy69P8QeTR0Z6UrzHXbpDSk2Nu3GSDVH8PUdMO7g5sZIR7ov6V/ecuPC706MtNCOlL28x8eZqQMj/cm1YyxvNRUwoQwHTw3/mH6Btbe6GJgbj96NdDY1iOW+1zbBbPo9G+nuZNQUu1KfBs7369lIj8wsylmpMQSHvvs00vFGGsY4q3WiYBeKT/qo57X8XY32PNXI73/72mqtL3it4b1UZEu5sFAyva5e2xfU3Pv8uok+XUKZqr725RfUL/38GrSfM4iNdYQ/vxb0pwxiSz3vz6/J/gV19T+/N8IX9Lf4gh4ln99nZug7BqJX0Of3e9LI4fRHdWniX9l3bbiOIrZ33mB7y+H7H35BD8swGeK+z+sDut/aS/YL+gF/fk/nL+jL/QW91ZWXMZzVJmspNNFCuBuMNyx5y/PItrfhg3Gkqi4TknAoC2rjMgoThvMhIMbtRSSBCgZH/z0pBjzChmo0bHxHZEA1G5DQd0QGVueCq1V7jQgDIgjDkb+IoIniCMOjrytqjKn0gKqp7ummAWwTFEK19ft3gJPtGz2RMBxz347hGUfWk8FW/t+t/XKmxBpbiwTf22Dhk0ucNvuD+oThyJvJKGPELqFBGE5SPyZjRqo7RurAsct9iKPynFQOiNhjZOPcUmVMrBNL7aLym7ldU0VGzTan94kpmLthlIxe21CjE87E2TCKTKO0oVavn5OT2ShjrXLiet2MxuveI42Sr/XK/un2a/rD9gC3JAH1g7BOGIaHuD9GEUN13LogDJd7o2c7eGXxHijS3hGhmo6LHhizeKE3AW0QXhi7tVVhyGdMqBiLuLMUIyniwpDPAmEY/iRpJ3uH5GkCdPLoiVBpnjPLAykFy1GBJlC2+heOD9ziDik4Pxib500WOzSu9swKpOBsD5WMIshuD8poz8yeDkqRsr1eefsmWe+yOUkCNZQ6lFINXpDoFUZvURd9RJfzQhIpz3SymBscXRrVVafUZZRMmcIEOaVQcGyaRF3QndVpL9jlalTkKUvVMitEJuWtmNX5D5n6J5yrv8uL0aoruIt66Ha7m02i4+ZULKb5ersNttt1Pl0Up80xmsz0imiT9D98CaeXB7l91AAAAABJRU5ErkJggg=="], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+Started GET "/coins" for ::1 at 2022-03-08 17:09:13 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/razodev/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6.2/lib/active_record/log_subscriber.rb:98
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.1ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 155ms (Views: 148.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/coins" for ::1 at 2022-03-08 17:09:13 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.1ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/coins" for ::1 at 2022-03-08 17:09:15 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.1ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/coins/2" for ::1 at 2022-03-08 17:09:30 -0300
+Processing by CoinsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"g+Lvv3bgfoYbeXN+wMS89x2MjBLLPX7VsC7dXOHyef71Wte22ckRMUduBex50AFRPdiab3om4+kG9EjJHiZJXw==", "id"=>"2"}
+  [1m[36mCoin Load (0.1ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:63
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coins_controller.rb:52
+  [1m[36mCoin Destroy (0.2ms)[0m  [1m[31mDELETE FROM "coins" WHERE "coins"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/coins_controller.rb:52
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/coins_controller.rb:52
+Redirected to http://localhost:3000/coins
+Completed 302 Found in 6ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/coins" for ::1 at 2022-03-08 17:09:30 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.1ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.1ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mCoin Load (0.1ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."description" = ? AND "coins"."acronym" = ? AND "coins"."url_image" = ? LIMIT ?[0m  [["description", "Bitcoin"], ["acronym", "BTC"], ["url_image", "https://logodownload.org/wp-content/uploads/2017/06/bitcoin-logo-5-1.png"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mCoin Load (0.1ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."description" = ? AND "coins"."acronym" = ? AND "coins"."url_image" = ? LIMIT ?[0m  [["description", "Ethereum"], ["acronym", "ETH"], ["url_image", "https://d33wubrfki0l68.cloudfront.net/fcd4ecd90386aeb50a235ddc4f0063cfbb8a7b66/4295e/static/bfc04ac72981166c740b189463e1f74c/40129/eth-diamond-black-white.jpg"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:30
+  [1m[36mCoin Create (0.3ms)[0m  [1m[32mINSERT INTO "coins" ("description", "acronym", "url_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["description", "Ethereum"], ["acronym", "ETH"], ["url_image", "https://d33wubrfki0l68.cloudfront.net/fcd4ecd90386aeb50a235ddc4f0063cfbb8a7b66/4295e/static/bfc04ac72981166c740b189463e1f74c/40129/eth-diamond-black-white.jpg"], ["created_at", "2022-03-08 20:09:38.554873"], ["updated_at", "2022-03-08 20:09:38.554873"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:30
+  [1m[36mCoin Load (0.1ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."description" = ? AND "coins"."acronym" = ? AND "coins"."url_image" = ? LIMIT ?[0m  [["description", "Dash"], ["acronym", "DASH"], ["url_image", "data:image/png;base64,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"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+Started GET "/coins" for ::1 at 2022-03-08 17:09:45 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/razodev/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6.2/lib/active_record/log_subscriber.rb:98
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 159ms (Views: 154.0ms | ActiveRecord: 0.5ms)
+
+
