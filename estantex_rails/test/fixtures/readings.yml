@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  month: MyString
+  progress: 1
+  evaluation: 1
+
+two:
+  month: MyString
+  progress: 1
+  evaluation: 1
